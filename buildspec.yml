@@ -14,4 +14,3 @@ artifacts:
     - target/surefire-reports/**
     - target/failsafe-reports/**
   discard-paths: no
-  

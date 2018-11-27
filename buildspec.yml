@@ -3,14 +3,12 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo Entered the build phase...
-      - echo Build started on `date`
       - mvn install
-    finally:
-      - echo This always runs even if the install command fails
 artifacts:
   files:
     - target/*.jar
-    - target/surefire-reports/**
-    - target/failsafe-reports/**
+    - target/surefire-reports/*.txt
+    - target/surefire-reports/*.xml   
+    - target/failsafe-reports/*.txt
+    - target/failsafe-reports/*.xml
   discard-paths: no

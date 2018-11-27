@@ -8,3 +8,9 @@ phases:
       - mvn install
     finally:
       - echo This always runs even if the install command fails
+artifacts:
+  files:
+    - target/*.jar
+    - target/surefire-reports/**
+    - target/failsafe-reports/**
+  discard-paths: no

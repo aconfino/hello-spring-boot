@@ -9,15 +9,7 @@ phases:
 artifacts:
   files:
     - target/*.jar
-  discard-paths: yes
-  secondary-artifacts:
-    surefire-reports:
-      files:
-        - target/surefire-reports/*.txt
-        - target/surefire-reports/*.xml
-      discard-paths: no
-    failsafe-reports:
-      files:
-        - target/failsafe-reports/*.txt
-        - target/failsafe-reports/*.xml
-      discard-paths: no
+    - target/surefire-reports/**
+    - target/failsafe-reports/**
+    - target/sonar/**
+  discard-paths: no

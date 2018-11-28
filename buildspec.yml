@@ -3,9 +3,9 @@ version: 0.2
 phases:
   build:
     commands:
-      - mvn sonar:sonar -Dsonar.projectKey=aconfino_hello-spring-boot -Dsonar.organization=aconfino-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=08e05868de3f72e8482b27f84d27727207664cab
       - mvn install
-
+      - mvn sonar:sonar -Dsonar.projectKey=aconfino_hello-spring-boot -Dsonar.organization=aconfino-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=08e05868de3f72e8482b27f84d27727207664cab
+      
 artifacts:
   files:
     - target/*.jar

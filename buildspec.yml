@@ -1,8 +1,13 @@
 version: 0.2
 
+env:
+  parameter-store:
+    SONARQUBE_LOGIN: "sonar.login"
+
 phases:
   build:
     commands:
+      - mvn sonar:sonar -Dsonar.projectKey=aconfino_hello-spring-boot -Dsonar.organization=aconfino-github -Dsonar.host.url=https://sonarcloud.io
       - mvn install
 
 artifacts:
